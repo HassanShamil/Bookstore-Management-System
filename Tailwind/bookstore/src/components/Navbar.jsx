@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaShoppingCart, FaUserCircle, FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,8 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center">
-            <a href="#" className="text-gray-600 hover:text-blue-600">Home</a>
+            {/* <a href="#" className="text-gray-600 hover:text-blue-600">Home</a> */}
+            <Link to="/" className="block py-2 text-gray-600 hover:text-blue-600">Home</Link>
             <a href="#" className="text-gray-600 hover:text-blue-600">Shop</a>
             <a href="#" className="text-gray-600 hover:text-blue-600">Deals</a>
             <a href="#" className="text-gray-600 hover:text-blue-600">Orders</a>

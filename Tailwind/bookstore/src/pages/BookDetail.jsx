@@ -9,7 +9,7 @@ const BookDetail = () => {
 
 
   return (
-    <div className="p-6 flex justify-center">
+    <div className="p-6 pt-20 flex justify-center">
       <div className="bg-white shadow-lg rounded-lg max-w-2xl w-full p-6">
         {/* Placeholder image section */}
         <div className="h-48 w-full bg-blue-100 rounded flex items-center justify-center mb-6">

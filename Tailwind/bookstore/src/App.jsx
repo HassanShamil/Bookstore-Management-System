@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home'
 import BookList from './pages/BookList';
 import BookDetail from './pages/BookDetail';
+import BookForm from './pages/BookForm';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BookList />} />
         <Route path="/books/:id" element={<BookDetail />} />
+        <Route path="/books/new" element={<BookForm />} />
+        <Route path="/books/:id/edit" element={<BookForm />} />
       </Routes>
     </>
 
