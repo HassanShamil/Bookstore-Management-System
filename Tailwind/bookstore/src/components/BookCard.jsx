@@ -1,15 +1,3 @@
-// const BookCard = ({ book }) => {
-//   return (
-//     <div className="border p-4 rounded shadow hover:shadow-md transition">
-//       <h3 className="text-lg font-semibold">{book.title}</h3>
-//       <p className="text-sm text-gray-700">Author: {book.author}</p>
-//       <p className="text-sm text-gray-500">Genre: {book.genre}</p>
-//       <p className="text-sm text-blue-600 font-semibold">${book.price}</p>
-//       <p className="text-sm text-gray-400">Stock: {book.stock}</p>
-//     </div>
-//   );
-// };
-
 const BookCard = ({ book }) => {
   return (
     <div className="border p-4 rounded shadow hover:shadow-md transition bg-white">
@@ -20,14 +8,13 @@ const BookCard = ({ book }) => {
 
       {/* Book Info */}
       <h3 className="text-lg font-semibold">{book.title}</h3>
-      <p className="text-sm text-gray-700">Author: {book.author}</p>
-      <p className="text-sm text-gray-500">Genre: {book.genre}</p>
+      <p className="text-sm text-gray-700">Author: {book.author.fullName}</p>
+      <p className="text-sm text-gray-500">Year: {book.year}</p>
       <p className="text-sm text-blue-600 font-semibold">${book.price}</p>
-      <p className="text-sm text-gray-400">Stock: {book.stock}</p>
+      <p className="text-sm text-gray-400">Stock: {book.stockQuantity}</p>
     </div>
   );
 };
 
 export default BookCard;
-
 

@@ -8,14 +8,6 @@ import BookForm from './pages/BookForm';
 
 function App() {
   return (
-    // <>
-    //   <Navbar></Navbar>
-    //   <div className="min-h-screen flex items-center justify-center bg-blue-100 text-blue-600 text-3xl font-bold">
-    //   Welcome to the bookstore application
-    //  </div>
-    //  <Home></Home>
-    // </>
-
     <>
       <Navbar />
       <Routes>

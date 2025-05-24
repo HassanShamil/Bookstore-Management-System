@@ -11,17 +11,33 @@ const BookFormFields = ({ book, handleChange }) => {
       />
       <input
         type="text"
-        name="author"
+        name="authorFName"
         placeholder="Author"
-        value={book.author}
+        value={book.author.firstName}
         onChange={handleChange}
         className="w-full p-2 border rounded mb-4"
       />
       <input
         type="text"
-        name="genre"
-        placeholder="Genre"
-        value={book.genre}
+        name="authorLName"
+        placeholder="Author"
+        value={book.author.lastName}
+        onChange={handleChange}
+        className="w-full p-2 border rounded mb-4"
+      />
+      <input
+        type="text"
+        name="biography"
+        placeholder="Biography"
+        value={book.author.biography}
+        onChange={handleChange}
+        className="w-full p-2 border rounded mb-4"
+      />  
+      <input
+        type="text"
+        name="year"
+        placeholder="Year"
+        value={book.year}
         onChange={handleChange}
         className="w-full p-2 border rounded mb-4"
       />
@@ -34,10 +50,18 @@ const BookFormFields = ({ book, handleChange }) => {
         className="w-full p-2 border rounded mb-4"
       />
       <input
+        type="text"
+        name="isbn"
+        placeholder="ISBN"
+        value={book.isbn}
+        onChange={handleChange}
+        className="w-full p-2 border rounded mb-4"
+      />
+      <input
         type="number"
         name="stock"
         placeholder="Stock"
-        value={book.stock}
+        value={book.stockQuantity}
         onChange={handleChange}
         className="w-full p-2 border rounded mb-4"
       />
