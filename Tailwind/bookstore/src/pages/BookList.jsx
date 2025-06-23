@@ -18,11 +18,11 @@ const BookList = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="p-6 text-center text-gray-600">Loading books...</div>;
-  if (error) return <div className="p-6 text-center text-red-600">{error}</div>;
+  if (loading) return <div className="p-6 pt-20 text-center text-gray-600">Loading books...</div>;
+  if (error) return <div className="p-6 pt-20 text-center text-red-600">{error}</div>;
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="p-6 pt-20 max-w-6xl mx-auto">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-extrabold text-gray-900">Books</h1>
         <Link

@@ -11,7 +11,7 @@ const BookFormFields = ({ book, handleChange }) => {
       />
       <input
         type="text"
-        name="authorFName"
+        name="author.firstName"
         placeholder="Author"
         value={book.author.firstName}
         onChange={handleChange}
@@ -19,7 +19,7 @@ const BookFormFields = ({ book, handleChange }) => {
       />
       <input
         type="text"
-        name="authorLName"
+        name="author.lastName"
         placeholder="Author"
         value={book.author.lastName}
         onChange={handleChange}
@@ -27,7 +27,7 @@ const BookFormFields = ({ book, handleChange }) => {
       />
       <input
         type="text"
-        name="biography"
+        name="author.biography"
         placeholder="Biography"
         value={book.author.biography}
         onChange={handleChange}
@@ -59,7 +59,7 @@ const BookFormFields = ({ book, handleChange }) => {
       />
       <input
         type="number"
-        name="stock"
+        name="stockQuantity"
         placeholder="Stock"
         value={book.stockQuantity}
         onChange={handleChange}

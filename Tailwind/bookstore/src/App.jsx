@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import BookList from './pages/BookList';
 import BookDetail from './pages/BookDetail';
 import BookForm from './pages/BookForm';
+import AuthorList from './pages/AuthorList';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/authors" element={<AuthorList />} />
         <Route path="/books" element={<BookList />} />
         <Route path="/books/:id" element={<BookDetail />} />
         <Route path="/books/new" element={<BookForm />} />

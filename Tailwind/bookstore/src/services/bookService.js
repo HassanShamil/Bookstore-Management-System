@@ -12,15 +12,32 @@ export const getBookById = async (id) => {
   return res.json();
 };
 
+
 export const createBook = async (book) => {
   const res = await fetch(BASE_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(book),
   });
-  if (!res.ok) throw new Error('Failed to create book');
+
+  if (!res.ok) {
+    let errorMessage = 'Failed to create book';
+
+    try {
+      const errorData = await res.json();
+      errorMessage = errorData.message || errorData.Error || errorMessage;
+    } catch {
+      
+      const text = await res.text();
+      if (text) errorMessage = text;
+    }
+
+    throw new Error(errorMessage);
+  }
+
   return res.json();
 };
+
 
 export const updateBook = async (id, book) => {
   const res = await fetch(`${BASE_URL}/${id}`, {
