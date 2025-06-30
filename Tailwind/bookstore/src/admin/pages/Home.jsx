@@ -1,10 +1,10 @@
-import DashboardStats from '@/components/DashBoardStats';
+import DashboardStats from '@/admin/components/DashBoardStats';
 import { Link } from 'react-router-dom';
-import AdvancedStatCard from '@/components/AdvancedStatCard';
+import AdvancedStatCard from '@/admin/components/AdvancedStatCard';
 import { FaBook, FaUserEdit, FaBoxOpen, FaUsers, FaDollarSign } from "react-icons/fa";
-import DashboardChart from '@/components/DashboardChart';
-import RecentOrders from '@/components/RecentOrders';
-import QuickActions from '@/components/QuickActions';
+import DashboardChart from '@/admin/components/DashboardChart';
+import RecentOrders from '@/admin/components/RecentOrders';
+import QuickActions from '@/admin/components/QuickActions';
 
 
 export default function Home() {
@@ -18,14 +18,14 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8 pt-24">
-      <div className="max-w-4xl mx-auto text-center">
+    <div className="min-h-screen bg-gray-100 p-8 ">
+      {/* <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-blue-700 mb-6">📚 Welcome to Bookstore Manager</h1>
         <p className="text-lg text-gray-700 mb-10">
           Manage your books, authors, and customers efficiently.
         </p>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link to="/books" className="bg-white shadow-md hover:shadow-xl p-6 rounded-lg border border-gray-200 hover:border-blue-500">
             <h2 className="text-xl font-semibold text-blue-600 mb-2">Books</h2>
             <p className="text-gray-600">Add, update, delete, or view all books.</p>
@@ -38,11 +38,11 @@ export default function Home() {
             <h2 className="text-xl font-semibold text-blue-600 mb-2">Customers</h2>
             <p className="text-gray-600">Track and manage customer data.</p>
           </Link>
-        </div> */}
-      </div>
-        <div className="p-6">
+        </div>
+      </div> */}
+      <div className="">
   
-        <h2 className="text-2xl font-semibold mb-6">📊 Dashboard Overview</h2>
+        {/* <h2 className="text-2xl font-semibold mb-6">📊 Dashboard Overview</h2> */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
 
           <AdvancedStatCard

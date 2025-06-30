@@ -1,5 +1,5 @@
 // components/DashboardStats.jsx
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/admin/components/ui/card";
 import { FaUsers, FaUserEdit, FaBoxOpen, FaBook } from "react-icons/fa";
 
 const DashboardStats = ({ stats }) => {

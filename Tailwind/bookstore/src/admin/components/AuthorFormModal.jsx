@@ -5,11 +5,11 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+} from '@/admin/components/ui/dialog';
+import { Button } from '@/admin/components/ui/button';
+import { Input } from '@/admin/components/ui/input';
+import { Label } from '@/admin/components/ui/label';
+import { Textarea } from '@/admin/components/ui/textarea';
 
 const AuthorFormModal = ({ isOpen, onClose, onSubmit, author }) => {
   const [formData, setFormData] = useState({

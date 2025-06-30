@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/admin/components/ui/card';
+import { Button } from '@/admin/components/ui/button';
+import { Input } from '@/admin/components/ui/input';
 import { Plus, Search, Edit, Trash2 } from 'lucide-react';
 import AuthorFormModal from '../components/AuthorFormModal';
-import { authorService } from '../services/authorService';
+import { authorService } from '../../services/authorService';
 
 const AuthorList = () => {
   const [authors, setAuthors] = useState([]);

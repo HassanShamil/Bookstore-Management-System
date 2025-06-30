@@ -1,6 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getBookById, deleteBook } from '../services/bookService';
+import { getBookById, deleteBook } from '../../services/bookService';
 
 const BookDetail = () => {
   const { id } = useParams();
@@ -38,10 +38,23 @@ const BookDetail = () => {
   return (
     <div className="p-6 pt-20 max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-2">{book.title}</h1>
-      {/* Image placeholder */}
-      <div className="w-full h-48 bg-blue-300 rounded mb-4 flex items-center justify-center text-white text-lg font-semibold">
-        Book Image
+
+      <div className="w-full h-48 bg-blue-100 rounded mb-4 flex items-center justify-center overflow-hidden">
+        {book.cover ? (
+          <img
+            src={book.cover}
+            alt={book.title}
+            className="h-full w-auto object-contain"
+            onError={(e) => {
+              e.target.onerror = null; 
+              e.target.style.display = 'none'; 
+            }}
+          />
+        ) : (
+          <span className="text-4xl text-blue-500">📘</span>
+        )}
       </div>
+
       <p className="text-gray-700 mb-1"><strong>Author:</strong> {book.author?.fullName || `${book.author?.firstName} ${book.author?.lastName}`}</p>
       <p className="text-gray-700 mb-1"><strong>Genre:</strong> {book.genre}</p>
       <p className="text-gray-700 mb-1"><strong>Year:</strong> {book.year}</p>

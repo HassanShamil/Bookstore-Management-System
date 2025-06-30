@@ -1,22 +1,29 @@
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home'
-import BookList from './pages/BookList';
-import BookDetail from './pages/BookDetail';
-import BookForm from './pages/BookForm';
-import AuthorList from './pages/AuthorList';
-import SideBar from './components/SideBar';
-import OrderDetail from './pages/OrderDetail';
+import Navbar from './admin/components/Navbar';
+import Home from './admin/pages/Home'
+import BookList from './admin/pages/BookList';
+import BookDetail from './admin/pages/BookDetail';
+import BookForm from './admin/pages/BookForm';
+import AuthorList from './admin/pages/AuthorList';
+import SideBar from './admin/components/SideBar';
+import OrderDetail from './admin/pages/OrderDetail';
 
 
 function App() {
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   return (
-    <div className="flex flex-col md:flex-row">
-      <SideBar />
-      <div className="flex-1 flex flex-col">
+    <div className="flex min-h-screen overflow-hidden">
+      <SideBar isOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
+
+      <div className={`flex-1 flex flex-col transition-all duration-300 ${isSidebarOpen ? 'md:ml-48' : 'md:ml-16'}`}>
         <Navbar />
 
-        <main className="p-4">
+        
+        <main className="p-4 flex-1 overflow-y-auto bg-gray-50">
+        {/* <main className={`flex-1 flex flex-col transition-all duration-300 ${isSidebarOpen ? 'md:ml-48' : 'md:ml-16'}`}> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/authors" element={<AuthorList />} />
@@ -32,5 +39,4 @@ function App() {
   );
 }
 
-
-export default App;
+export default App

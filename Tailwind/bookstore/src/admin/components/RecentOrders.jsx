@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getOrders } from '../data/orders';
+import { getOrders } from '../../data/orders';
 
 const RecentOrders = () => {
   const [orders, setOrders] = useState([]);
